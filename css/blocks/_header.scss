@@ -1,0 +1,67 @@
+.header { 
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: $margin-y;
+    position: relative; //for proper layout with bg as image
+    z-index: 2;
+
+    // .header__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+        padding: 10px 8px;
+        @include mobile {
+            flex-flow: row wrap;
+            justify-content: center;
+            row-gap: 10px;
+           
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        flex-shrink: 0;
+        justify-content: flex-start;
+    }
+
+    // .header__links
+
+    &__links {
+        display: flex;
+        flex-flow: row row-reverse;
+        gap: 32px;
+        justify-content: center;
+        align-items: center;
+        a {
+            color: var(--white);
+            font-size: 16px;
+            line-height: calc(24 / 16 * 100%);
+            text-align: center;
+            transition: all 280ms ease;
+            @include hover {
+                color: var(--hover);
+            }
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // .header__cta
+
+    &__cta {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+// header is ready ! 
+
+

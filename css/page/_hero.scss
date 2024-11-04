@@ -1,0 +1,110 @@
+.hero {
+    width: 100%;
+    min-height: 600px;
+    margin-bottom: $margin-y;
+    @include tablet {
+        height: auto;
+    }
+
+    // .hero__content
+
+    &__content {
+        height: inherit;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items:flex-start;
+        gap: 100px;
+        position: relative;
+        z-index: 2;
+        @include tablet {
+            justify-content: center;
+            align-items: center;
+            max-width: 98vw;
+            padding: 4px;
+            flex-flow: row wrap;
+        }
+        
+    }
+
+    // .hero__icons
+
+    &__icons {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 12px;
+        margin-left: 30px;
+        @include tablet {
+            justify-content: center;
+            align-items: center;
+            flex-flow: row nowrap;
+            gap: 1rem;
+        }
+       
+    }
+
+    // .hero__icons--icon
+
+    &__icons--icon {
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--blue-accent);
+        padding-top: 8%;
+        img {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-inline: auto;
+            display: block;
+
+        }
+    }
+
+    // .hero__text
+
+    &__text {
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 12px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @include mobile {
+            justify-content: center;
+            align-items: center;
+        }
+        span {
+            color: var(--blue-accent);
+        }
+        h1 { 
+            color: var(--white);
+            font-size: 100px;
+            line-height: calc(94 / 100 * 100%);
+            width: 623px;
+            height: 309px;
+            font-weight: bold;
+            text-align: left;
+            @include tablet {
+                font-size: calc(94px / 1.618);
+                text-align: center;
+            }
+
+        }
+        p {
+            font-size: 24px;
+            line-height: calc(30 / 24 * 100%);
+            max-height: 59px;
+            width: 438px;
+            max-width: 98vw;
+            text-align: left;
+            @include tablet {
+                font-size: calc(24px / 1.618);
+            }
+
+        }
+    }
+}
+// hero section finished

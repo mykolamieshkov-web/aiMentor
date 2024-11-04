@@ -1,0 +1,73 @@
+//  special file for global utilities
+
+// property with a max-width of wrapper-container(standalone variable for different projects): 
+$content-max-width: 1600px;
+$margin-y: 32px;
+
+
+// content-stability with wrapper-container: 
+//center-oriented conted with flex-box and without margin properties
+.container {
+   margin: 0 auto;
+    max-width: $content-max-width;
+    box-sizing: content-box;
+    
+}
+// utility class for image as bg (better pages optimisation
+
+.bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 800px;
+    z-index: 1;
+    img {
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        height: 100%;
+       
+    }}
+   
+     
+     // hide text for screen-readers:
+     
+     .visually-hidden {
+      @include visually-hidden; 
+       }
+    //    Reserved styles for cta: 
+       .btn-small {
+        @include btn-sml;
+       }
+       .btn-mid {
+        @include btn-mid;
+       }
+       .btn-large {
+        @include btn-large;
+       }
+       p.preheader {
+        text-transform:uppercase;
+        text-align: center; 
+        font-size: 16px;
+        line-height: calc(24 / 16 * 100%);
+        font-weight: 400;
+        color: var(--hover);
+
+       }
+       // video block: 
+       .video {
+        margin-block: $margin-y;
+        max-width: $content-max-width;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 4px;
+         
+        iframe {
+            max-width: 98vw;
+
+        }
+       }
+      

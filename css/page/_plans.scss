@@ -1,0 +1,93 @@
+.price {
+    margin-block: $margin-y;
+    min-height: fit-content;
+    width: 98vw;
+
+    // .price__content
+
+    &__content {
+        margin-block: $margin-y;
+        height: auto;
+        width: 100%;
+    }
+
+    // .price__heading
+
+    &__heading {
+        h2 {
+            font-size: 54px;
+            line-height: calc(60 / 54 * 100%);
+            letter-spacing: -2px;
+            color: var(--white);
+            text-align: center;
+        }
+        
+    }
+
+    // .price__row
+
+    &__row {
+        margin-top: $margin-y;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        gap: 1.2rem;
+        width: 98vw;
+        height: auto;
+        padding: 8px 4px;
+        @include laptop {
+            justify-content: center;
+            
+        }
+    }
+
+    // .price__row--card
+
+    &__row--card {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2.2rem;
+        width: 633px;
+        height: 555px;
+        max-width: 98vw;
+        border-radius: 16px;
+        border: 1px solid var(--blue-accent);
+        @include tablet {
+            width: 96vw;
+        }
+
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            row-gap: 2.2rem;
+            h3 {
+                font-size: 36px;
+                line-height: calc(60 / 36 * 100%);
+                font-weight: 700px;
+                color: var(--white);
+            }
+            p {
+                text-align: center;
+            }
+            img {
+                float: left;
+                margin-right: 10px;
+            }
+
+        }
+    }
+
+
+.price-label {
+    font-size: 24px;
+    line-height: calc(20 / 24 * 100%);
+    color: var(--hover);
+    font-weight: 300px;
+}
+}

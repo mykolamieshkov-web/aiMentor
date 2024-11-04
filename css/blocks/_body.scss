@@ -1,0 +1,22 @@
+// here only variables for body 
+body, html {
+ scroll-behavior: smooth;
+width: 100%;
+height: auto;
+min-height: 100%;
+overflow-x: hidden;
+overscroll-behavior-block: none;
+ //скрываем прокрутку за рамки контейнера-ограничителя;
+font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: calc(24 / 16 * 100%); // default typography for paragraphs
+letter-spacing: 0%;
+color: var(--gray);
+text-align: left;
+background-color: var(--background);
+}
+
+
+
+   

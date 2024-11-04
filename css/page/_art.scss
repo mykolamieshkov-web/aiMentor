@@ -1,0 +1,48 @@
+.art {
+    margin-block: $margin-y;
+
+    // .art__content
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+
+    // .art__heading
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 98vw;
+        flex-flow: column nowrap;
+        row-gap: 1.2rem;
+        h2 {
+            font-size: 54px;
+            line-height: calc(60 / 54 * 100%);
+            letter-spacing: -2px;
+            color: var(--white);
+        }
+    }
+
+    // .art__cover
+
+    &__cover {
+        max-width: 1920px;
+        max-height:745px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+        @include tablet {
+            max-width: 98vw;
+            max-height: calc(745px / 1.618);
+        }
+    }
+}
+
