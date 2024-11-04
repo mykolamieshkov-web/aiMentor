@@ -1,9 +1,10 @@
 .hero {
     width: 100%;
     min-height: 600px;
-    margin-bottom: $margin-y;
+    margin-block: $margin-y;
+    overscroll-behavior-y:none;
     @include tablet {
-        height: auto;
+        min-height: min-content;
     }
 
     // .hero__content
@@ -17,12 +18,14 @@
         gap: 100px;
         position: relative;
         z-index: 2;
+        
         @include tablet {
             justify-content: center;
             align-items: center;
             max-width: 98vw;
             padding: 4px;
             flex-flow: row wrap;
+            row-gap: 8px;
         }
         
     }
@@ -54,6 +57,7 @@
         border-radius: 10px;
         background-color: var(--blue-accent);
         padding-top: 8%;
+        
         img {
             width: 16px;
             height: 16px;
@@ -69,12 +73,13 @@
     &__text {
         display: flex;
         flex-flow: column nowrap;
-        row-gap: 12px;
+        row-gap: 32px;
         justify-content: flex-start;
         align-items: flex-start;
         @include mobile {
             justify-content: center;
             align-items: center;
+            
         }
         span {
             color: var(--blue-accent);

@@ -6,6 +6,7 @@
     row-gap: 2.2rem;
     margin-block: $margin-y;
     min-height: 946px;
+    position: relative;
     @include tablet {
         min-height: fit-content;
     }
@@ -55,7 +56,7 @@
         padding-inline: 8px;
         align-items: center;
         justify-content: center;
-        @include tablet {
+        @include  laptop {
             flex-flow: row wrap;
         }
         img {

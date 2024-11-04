@@ -35,7 +35,7 @@
         gap: 1.2rem;
         width: 98vw;
         height: auto;
-        padding: 8px 4px;
+        padding:$margin-y;
         @include laptop {
             justify-content: center;
             
