@@ -45,6 +45,12 @@
                 font-size: 12px;
                 text-wrap: balance;
             }
+            a {
+                transition: all 230ms ease;
+                @include hover {
+                    color: var(--hover);
+                }
+            }
 
 
         }
